@@ -2,7 +2,7 @@
 # -*- Coding: UTF-8 -*-
 
 import tkinter as tk
-
+import shapely
 import unittest
 
 
@@ -26,6 +26,13 @@ class TestStringMethods(unittest.TestCase):
 class TestTkBasic(unittest.TestCase):
     def test_constructor(self):
         pass
+
+
+class TestShapely(unittest.TestCase):
+    def test_Point(self):
+        actual = shapely.Point(10, 20)
+        self.assertEqual(10, actual.x)
+        self.assertEqual(20, actual.y)
 
 
 if __name__ == "__main__":
